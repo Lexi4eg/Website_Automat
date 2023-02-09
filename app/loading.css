@@ -1,0 +1,21 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-bar {
+  height: 4px;
+  width: 100%;
+  background-color: #1e90ff;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.loading-percentage {
+  margin-left: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e90ff;
+}
