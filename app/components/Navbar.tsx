@@ -6,7 +6,7 @@ import Navbar_Desktop from "./Navbar_Desktop";
 import Head from "../head";
 import Navbar_Mobile from "./Navbar_Mobile";
 
-function MyComponent() {
+function Navbar() {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const router = useRouter();
 
@@ -22,4 +22,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default Navbar;

@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        pattern1:
+          "https://webimages.mongodb.com/_com_assets/cms/l9e8kfw56smkxzqyu-hero-blob-cropped.svg?auto=format%252Ccompress",
+      },
       colors: {
         green1: "#00ed64",
         black1: "#001e2b",

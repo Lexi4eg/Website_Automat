@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
-function Navbar() {
+function Navbar_Mobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -43,4 +43,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar_Mobile;
