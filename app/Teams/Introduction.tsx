@@ -5,7 +5,7 @@ function Introduction() {
     <>
       <div className="px-4 sm:px-20 pt-5 sm:pt-20 text-2xl">Our Values</div>
       <div className="px-4 sm:px-20 pt-4 text-5xl">Rules to Live by </div>
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-5 p-5 sm:p-20">
+      <div className="grid sm:grid-cols-2 grid-cols-1 mb-28 gap-5 p-5 sm:p-20">
         <div>
           <div className="text-7xl">01</div>
           <div className="text-2xl">Love your craft.</div>

@@ -24,21 +24,21 @@ function page() {
             objectFit="cover"
           ></Image>
         </div>
-        <div className="w-full h-fit  bg-bg_gray">
+        <div className="w-full h-fit  bg-bg_gray2">
           <Navbar></Navbar>
 
-          <h1 className="text-white px-6 sm:px-20 p-10 text-4xl lg:text-6xl sm:text-2xl md:text-5xl p-4 ">
+          <h1 className="text-white px-6 sm:px-20 p-10 mt-10 text-4xl lg:text-6xl sm:text-2xl md:text-5xl p-4 ">
             <div className={roboto.className}>
               Meet our team of creators, designers, and world-class problem
               solvers
             </div>
           </h1>
-          <p className="text-white  px-6 sm:px-20 text-lg mt-3 p-4">
+          <p className="text-white  px-6 sm:px-20 text-lg mt-3 p-4 mb-10">
             To be the Team our Teachers want us to be, it takes an eclectic
             group of passionate operators. Get ot know the people leading the
             way at Team Blau
           </p>
-          <div className="text-white h-fit p-4 bg-bg_gray2">
+          <div className="text-white h-fit p-4 bg-bg_gray">
             <Introduction />
           </div>
         </div>

@@ -1,0 +1,8 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for a specific element */
+.element::-webkit-scrollbar {
+  display: none;
+}

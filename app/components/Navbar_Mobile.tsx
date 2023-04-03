@@ -33,9 +33,11 @@ function Navbar_Mobile() {
             <Link href={"/Blog"}>
               <div className="px-2 p-1 my-4  ml-4">Blog</div>
             </Link>
-            <div className="  ml-3 my-2  justify-center text-black flex h-full w-40 px-3 py-4 items-center border box-border border-black1 rounded-md bg-green1">
-              Contact Us
-            </div>
+            <Link href={"/contactus"}>
+              <div className="  ml-3 my-2  justify-center text-black flex h-full w-40 px-3 py-4 items-center border box-border border-black1 rounded-md bg-green1">
+                Contact Us
+              </div>
+            </Link>
           </div>
         </div>
       )}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Hero_right() {
   return (
-    <div className="text-white flex justify-end rounded-latin-lg">
+    <div className="text-white flex justify-end rounded-latin-lg pt-20">
       <Image
         className="rounded-l-2xl border border-black"
         src={"/automat.jpeg"}

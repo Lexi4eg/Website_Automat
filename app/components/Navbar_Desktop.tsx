@@ -20,9 +20,11 @@ function Navbar_Desktop() {
           <div className="px-2 p-1 ml-4">Blog</div>
         </Link>
       </div>
-      <div className="hidden sm:flex h-full px-3 text-black   items-center border box-border border-black1 rounded-md bg-green1 ">
-        <div className=""> Contact Us</div>
-      </div>
+      <Link href={"/contactus"}>
+        <div className="hidden sm:flex h-full px-3 text-black   items-center  rounded-md  ">
+          <div className="text-white"> Contact Us</div>
+        </div>
+      </Link>
     </div>
   );
 }

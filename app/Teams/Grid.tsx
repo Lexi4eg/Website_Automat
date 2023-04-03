@@ -51,8 +51,11 @@ const Grid = () => {
   return (
     <div className="grid whitespace-nowrap overflow-auto scrollbar-hide  w-full grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8 p-8 ">
       {items.map((item) => (
-        <div key={item.id} className="group shadow-lg p-2 rounded-md">
-          <div className="flex justify-center w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+        <div
+          key={item.id}
+          className="group bg-bg_gray2 p-4 pb-10 shadow-lg p-2 rounded-md"
+        >
+          <div className="flex justify-center  w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
             <Image
               className="rounded-lg"
               src={item.imageUrl}

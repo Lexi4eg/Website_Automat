@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./Noscrollbar.css";
 
 export default function RootLayout({
   children,
