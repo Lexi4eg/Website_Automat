@@ -1,101 +1,53 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
+import Grid from "./Grid";
+
+import { Roboto } from "@next/font/google";
+import Introduction from "./Introduction";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 function page() {
   return (
-    <div className="w-screen h-full">
-      <Navbar></Navbar>
-      <h1 className="text-white text-7xl p-4">
-        Meet our team of creators, designers, and world-class problem solvers
-      </h1>
-      <p className="text-white text-2xl mt-3">
-        To be the Team our Teachers want us to be, it takes an eclectic group of
-        passionate operators. Get ot know the people leading the way at Team
-        Blau
-      </p>
+    <>
+      <div className="flex flex-row bg-bg_gray">
+        <div className="hidden sm:flex">
+          <Image
+            src={"/About-massive-agency-700x1049.jpg"}
+            alt={""}
+            width={1000}
+            height={1000}
+            objectFit="cover"
+          ></Image>
+        </div>
+        <div className="w-full h-fit  bg-bg_gray">
+          <Navbar></Navbar>
 
-      <div className="m-4 grid grid-cols-3  text-white  gap-4 ">
-        <div className="flex flex-col shadow-md p-1 ">
-          <Image
-            src="/Prattes_Felix.jpg"
-            alt=""
-            width={300}
-            height={300}
-            className="rounded-lg"
-          />
-          <div className="text-2xl">Felix Prattes</div>
-          <div>CTO</div>
-        </div>
-        <div className=" shadow-md p-1 w-100 h-100">
-          <div className="h-auto w-auto">
-            <Image
-              src="/Lukic_Martina.jpg"
-              alt="My image"
-              height={200}
-              width={200}
-            />
+          <h1 className="text-white px-6 sm:px-20 p-10 text-4xl lg:text-6xl sm:text-2xl md:text-5xl p-4 ">
+            <div className={roboto.className}>
+              Meet our team of creators, designers, and world-class problem
+              solvers
+            </div>
+          </h1>
+          <p className="text-white  px-6 sm:px-20 text-lg mt-3 p-4">
+            To be the Team our Teachers want us to be, it takes an eclectic
+            group of passionate operators. Get ot know the people leading the
+            way at Team Blau
+          </p>
+          <div className="text-white h-fit p-4 bg-bg_gray2">
+            <Introduction />
           </div>
-          <div className="text-2xl">Martina Lukic</div>
-          <div>Konstruktion</div>
-        </div>
-        <div className=" shadow-md p-1">
-          <Image
-            src="/Haag_Julia.jpg"
-            alt=""
-            width={300}
-            height={300}
-            className="rounded-lg"
-          />
-          <div className="text-2xl">Haag Julia</div>
-          <div>Konstruktion</div>
-        </div>
-        <div className=" shadow-md p-1">
-          <Image
-            src="/Hochleitner_Max.jpg"
-            alt=""
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-          <div className="text-2xl">Hochleitner Max</div>
-          <div>Konstruktion</div>
-        </div>
-        <div className=" shadow-md p-1">
-          <Image
-            src="/Sadikovic_Sanel.jpg"
-            alt=""
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-          <div className="text-2xl">Sanel Sadikovic</div>
-          <div>Konstruktion</div>
-        </div>
-        <div className=" shadow-md p-1">
-          <Image
-            src="/Kaiser_Silvio.jpg"
-            alt=""
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-          <div className="text-2xl">Silvio Kaiser</div>
-          <div>Konstruktion</div>
-        </div>
-        <div className=" shadow-md p-1">
-          <Image
-            src="/Aichhorn_Viktor.jpg"
-            alt=""
-            width={200}
-            height={200}
-            className="rounded-lg"
-          />
-          <div className="text-2xl">Viktor Aichhorn</div>
-          <div>Konstruktion</div>
         </div>
       </div>
-    </div>
+
+      <div className="w-full bg-bg_gray">
+        <Grid />
+      </div>
+    </>
   );
 }
 

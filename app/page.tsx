@@ -9,8 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
-      <div className=" overflow-hidden  text-white">
-        <Navbar />
+      <div className="bg-white overflow-hidden h-screen">
+        <div className="bg-black">
+          <Navbar />
+        </div>
         <div className="w-screen ">
           <div className="">
             <Hero />
