@@ -20,14 +20,30 @@ const transporter = nodemailer.createTransport({
 export default async (req, res) => {
   try {
     // Extract the form data from the request body
-    const { name, email, message, emailsender } = req.body;
+    const {
+      email,
+      message,
+      emailsender,
+      firstname,
+      lastname,
+      company,
+      phone,
+      header,
+    } = req.body;
 
     // Send the email
     await transporter.sendMail({
-      from: '"Felix Prattes Email Api" <${emailAddress}>',
-      to: email, // the recipient's email address
+      from: '"Automat AG" <${emailAddress}>',
+      to: "felix.prattes@gmail.com",
       subject: "New message from website",
-      text: `Name: ${name}\nEmail: ${emailsender}\nMessage: ${message}`,
+      text: `Email: ${email}\nMessage: ${message}\nEmailsender: ${emailsender}\nFirstname: ${firstname}\nLastname: ${lastname}\nCompany: ${company}\nPhone: ${phone}\nHeader: ${header}`,
+    });
+
+    await transporter.sendMail({
+      from: '"Felix Prattes Email Api" <${emailAddress}>',
+      to: emailsender,
+      subject: "Thank you",
+      text: `Thank you for your interest in our services`,
     });
 
     // Send a response to the client

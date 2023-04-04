@@ -6,7 +6,11 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function Contactme() {
-  const [name, setName] = useState("");
+  const [firstname, setfirstname] = useState("");
+  const [header, setheader] = useState("");
+  const [phone, setphone] = useState("");
+  const [company, setcompany] = useState("");
+  const [lastname, setlastname] = useState("");
   const [emailsender, setemailsender] = useState("");
   const email = "felix.prattes@gmail.com";
   const [message, setMessage] = useState("");
@@ -22,10 +26,14 @@ function Contactme() {
     setStatus(null);
     try {
       await axios.post("/api/send-email", {
-        name,
+        firstname,
+        lastname,
         email,
         message,
         emailsender,
+        phone,
+        company,
+        header,
       });
 
       setStatus("Email sent successfully");
@@ -54,27 +62,27 @@ function Contactme() {
                   <div>Name*</div>
                   <input
                     type="text"
-                    className="w-full bg-bg_gray2 border-b p-2 pl-0"
+                    className="w-full bg-bg_gray2 border-b p-2 pl-0 hover:border-yellow-400"
                     name="name"
                     id="rollNumber"
-                    value={name}
+                    value={firstname}
                     required
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setfirstname(e.target.value)}
                   />
                   <div>first</div>
                 </div>
                 <div className="w-1/2 p-5">
-                  <div>Name*</div>
+                  <div>*</div>
                   <input
                     type="text"
-                    className="w-full bg-bg_gray2 border-b p-2 pl-0"
+                    className="w-full bg-bg_gray2 border-b p-2 pl-0 hover:border-yellow-400"
                     name="name"
                     id="rollNumber"
-                    value={name}
+                    value={lastname}
                     required
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setlastname(e.target.value)}
                   />
-                  <div>first</div>
+                  <div>last</div>
                 </div>
               </div>
               <div className="flex flex-row">
@@ -82,7 +90,7 @@ function Contactme() {
                   <div>Email*</div>
                   <input
                     type="text"
-                    className="w-full bg-bg_gray2 border-b p-2 pl-0"
+                    className="w-full bg-bg_gray2 border-b p-2 pl-0 hover:border-yellow-400"
                     name="Email"
                     id="rollNumber"
                     value={emailsender}
@@ -94,12 +102,12 @@ function Contactme() {
                   <div>Phone*</div>
                   <input
                     type="text"
-                    className="w-full bg-bg_gray2 border-b p-2 pl-0"
+                    className="w-full bg-bg_gray2 border-b p-2 pl-0 hover:border-yellow-400"
                     name="name"
                     id="rollNumber"
-                    value={name}
+                    value={phone}
                     required
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => setphone(e.target.value)}
                   />
                 </div>
               </div>
@@ -108,12 +116,12 @@ function Contactme() {
                 <input
                   type="text"
                   placeholder="Working together"
-                  className="w-full bg-bg_gray2 border-b p-2 pl-0"
+                  className="w-full bg-bg_gray2 border-b p-2 pl-0 hover:border-yellow-400"
                   name="name"
                   id="rollNumber"
-                  value={name}
+                  value={header}
                   required
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setheader(e.target.value)}
                 />
               </div>
 
@@ -121,12 +129,12 @@ function Contactme() {
                 <div>Company</div>
                 <input
                   type="text"
-                  className="w-full bg-bg_gray2 border-b p-2 pl-0"
+                  className="w-full bg-bg_gray2 border-b p-2 pl-0 hover:border-yellow-400"
                   name="name"
                   id="rollNumber"
-                  value={name}
+                  value={company}
                   required
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setcompany(e.target.value)}
                 />
               </div>
               <div className="w-full p-5">
@@ -134,7 +142,7 @@ function Contactme() {
                   type="textarea"
                   placeholder="Your Message"
                   name="Your Message"
-                  className="w-full h-40 bg-bg_gray2 border rounded-sm p-4"
+                  className="w-full h-40 bg-bg_gray2 border rounded-sm p-4 hover:border-yellow-400"
                   id="name"
                   value={message}
                   required
@@ -142,7 +150,7 @@ function Contactme() {
                 />
               </div>
               <div className="flex justify-center">
-                <div className="flex justify-center w-32 rounded-md  border py-2 px-4  ">
+                <div className="flex justify-center w-32 rounded-md  border py-2 px-4 hover:border-yellow-400  ">
                   <button
                     type="submit"
                     className="  text-xl p-1 text-center text-white w-20"
