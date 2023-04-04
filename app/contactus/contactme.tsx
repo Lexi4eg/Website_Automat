@@ -46,19 +46,19 @@ function Contactme() {
     <>
       <div className="flex text-white flex-col h-screen  bg-bg_gray2">
         <div>
-          <div className="p-20 py-10">
+          <div className="p-5 sm:p-20 py-10">
             <div className="text-2xl">Contact</div>
             <div className="pt-6 text-6xl">Don’t be shy, say hi.</div>
-            <div className="pt-10 text-3xl w-2/3">
+            <div className="pt-10 text-3xl sm:w-2/3 w-full">
               Some of the world’s most impactful products, solutions and
               campaigns start with a conversation. Tell us about what you’re
               making and we’ll see how we can help.
             </div>
           </div>
-          <div className=" p-20 py-10">
+          <div className="p-5 sm:p-20 py-10 bg-bg_gray2">
             <form onSubmit={handleSubmit} className="">
-              <div className="flex flex-row">
-                <div className="w-1/2  p-5">
+              <div className="flex sm:flex-row flex-col">
+                <div className="sm:w-1/2 w-full  p-5">
                   <div>Name*</div>
                   <input
                     type="text"
@@ -71,7 +71,7 @@ function Contactme() {
                   />
                   <div>first</div>
                 </div>
-                <div className="w-1/2 p-5">
+                <div className="sm:w-1/2 w-full p-5">
                   <div>*</div>
                   <input
                     type="text"
@@ -85,8 +85,8 @@ function Contactme() {
                   <div>last</div>
                 </div>
               </div>
-              <div className="flex flex-row">
-                <div className="w-1/2  p-5">
+              <div className="flex sm:flex-row flex-col">
+                <div className="sm:w-1/2 w-full  p-5">
                   <div>Email*</div>
                   <input
                     type="text"
@@ -98,7 +98,7 @@ function Contactme() {
                     onChange={(e) => setemailsender(e.target.value)}
                   />
                 </div>
-                <div className="w-1/2 p-5">
+                <div className="sm:w-1/2 w-full p-5">
                   <div>Phone*</div>
                   <input
                     type="text"
