@@ -3,9 +3,9 @@ import { Inter } from "@next/font/google";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar";
 
-import Hero from "./components/hero/hero";
-import Link from "next/link";
+import "animate.css";
 
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -28,7 +28,9 @@ export default function Home() {
           <div className="sm:col-span-4 sm:row-span-5  bg-white p-2 sm:p-10">
             <div className="flex sm:flex-cols flex-row sm:justify-between justify-between">
               <div className=" text-2xl sm:text-4xl ">
-                <Link href={"/"}>News</Link>
+                <Link href={"/"} className="animate__animated animate__bounce">
+                  News
+                </Link>
               </div>
               <div className="text-2xl">
                 <Link href={"/"}>Check more process here</Link>
