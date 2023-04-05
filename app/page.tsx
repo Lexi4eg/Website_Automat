@@ -26,12 +26,15 @@ export default function Home() {
           <div className="sm:col-span-4 sm:row-span-5  bg-white p-2 sm:p-10">
             <div className="flex sm:flex-cols flex-row sm:justify-between justify-between">
               <div className=" text-2xl sm:text-4xl ">
-                <Link href={"/"} className="animate__animated animate__bounce">
+                <Link
+                  href={"/Blog"}
+                  className="animate__animated animate__bounce"
+                >
                   News
                 </Link>
               </div>
               <div className="text-2xl">
-                <Link href={"/"}>Check more process here</Link>
+                <Link href={"/Blog"}>Check more process here</Link>
               </div>
             </div>
             <div className=" text-6xl mt-10 mb-10 sm:text-8xl flex sm:mt-56 justify-center ">
