@@ -13,6 +13,7 @@ module.exports = {
         darkblue1: "#21313c",
         bg_gray2: "#191a1b",
         bg_blue: "#202024",
+        bg_gray3: "#191a1b",
       },
     },
   },
