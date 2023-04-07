@@ -84,7 +84,7 @@ const BannerRowTop = ({ title }: BannerRowTopProps) => {
         }}
         className="row-col"
       >
-        <span className="row-message">
+        <span className="row-message text-8xl">
           We are specialised in setting up the foundation of your brand and
           setting you up for success.
         </span>

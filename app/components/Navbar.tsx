@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { isMobile } from "react-device-detect";
 import Navbar_Desktop from "./Navbar_Desktop";
 import Head from "../head";
+import Header from "../components/Header";
 import Navbar_Mobile from "./Navbar_Mobile";
 import { motion } from "framer-motion";
 
@@ -21,12 +22,12 @@ function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{
         ease: "easeInOut",
-        duration: 0.5,
-        delay: 0.2,
+        duration: 1,
+        delay: 0.6,
       }}
     >
       <Head />
-      {isMobileDevice ? <Navbar_Mobile /> : <Navbar_Desktop />}
+      {isMobileDevice ? <Navbar_Mobile /> : <Header />}
     </motion.div>
   );
 }

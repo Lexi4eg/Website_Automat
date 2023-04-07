@@ -4,6 +4,7 @@
 import React, { useState } from "react";
 
 import axios from "axios";
+import { motion } from "framer-motion";
 
 function Contactme() {
   const [firstname, setfirstname] = useState("");
@@ -48,12 +49,22 @@ function Contactme() {
         <div>
           <div className="p-5 sm:p-20 py-10">
             <div className="text-2xl">Contact</div>
-            <div className="pt-6 text-6xl">Don’t be shy, say hi.</div>
-            <div className="pt-10 text-3xl sm:w-2/3 w-full">
-              Some of the world’s most impactful products, solutions and
-              campaigns start with a conversation. Tell us about what you’re
-              making and we’ll see how we can help.
-            </div>
+            <div className="pt-6 text-6xl p-6 px-0">Don’t be shy, say hi.</div>
+            <motion.div
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+                delay: 0.4,
+              }}
+            >
+              <span className="mt-10 text-3xl sm:w-2/3 w-full">
+                Some of the world’s most impactful products, solutions and
+                campaigns start with a conversation. Tell us about what you’re
+                making and we’ll see how we can help.
+              </span>
+            </motion.div>
           </div>
           <div className="p-5 sm:p-20 py-10 bg-bg_gray2">
             <form onSubmit={handleSubmit} className="">

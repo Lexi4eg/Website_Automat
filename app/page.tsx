@@ -7,6 +7,7 @@ import Header from "./components/Header";
 
 import "./sass/main.scss";
 import Loader from "./components/Loader";
+import Navbar from "./components/Navbar";
 
 function Page() {
   const [loading, setLoading] = useState(true);
@@ -18,14 +19,14 @@ function Page() {
   }, [loading]);
 
   return (
-    <div className="text-white">
+    <div className="text-white text-5xl">
       {loading ? (
         <motion.div key="loader">
           <Loader setLoading={setLoading} />
         </motion.div>
       ) : (
         <>
-          <Header />
+          <Navbar />
           <Banner />
           {!loading && (
             <div className="transition-image final">

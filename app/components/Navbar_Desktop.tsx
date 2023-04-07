@@ -3,10 +3,10 @@ import React from "react";
 
 function Navbar_Desktop() {
   return (
-    <div className="flex flex-row items-center h-20 sm:justify-between justify-center px-4 py-2 text-white   text-xl ">
+    <div className="flex flex-row items-center h-20 sm:justify-between justify-center px-4 py-2 text-white   text-2xl ">
       <div className=" text-blue-600 rounded-md items-center  hidden sm:flex h-full ">
         <Link href={"/"}>
-          <div className=" px-2 text-white ">Gruppe Blau</div>
+          <div className=" px-2 text-white text-3xl ">Gruppe Blau</div>
         </Link>
       </div>
       <div className="flex  flex-row">
@@ -22,7 +22,7 @@ function Navbar_Desktop() {
       </div>
       <Link href={"/contactus"}>
         <div className="hidden sm:flex h-full px-3 text-black   items-center  rounded-md  ">
-          <div className="text-white"> Contact Us</div>
+          <div className="text-white underline"> Let s work together</div>
         </div>
       </Link>
     </div>

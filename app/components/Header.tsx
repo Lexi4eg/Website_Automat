@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import "../sass/main.scss";
 
 const Header = () => {
   return (
@@ -15,7 +16,9 @@ const Header = () => {
       className="header"
     >
       <div className="header-inner text-white">
-        <div className="logo">Gruppe Blau</div>
+        <div className="logo">
+          <Link href={""}>Gruppe Blau</Link>
+        </div>
         <nav className="nav">
           <li>
             <Link href="/design">Automat</Link>
@@ -24,15 +27,11 @@ const Header = () => {
             <Link href="/Teams">Teams</Link>
           </li>
           <li>
-            <Link href="/cases">Blog</Link>
+            <Link href="/Blog">Blog</Link>
           </li>
         </nav>
         <div className="contact">
           <Link href="/contactus">Let s work together</Link>
-        </div>
-        <div className="hamburger-menu">
-          <span></span>
-          <span></span>
         </div>
       </div>
     </motion.div>

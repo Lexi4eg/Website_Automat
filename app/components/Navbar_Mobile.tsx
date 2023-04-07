@@ -6,9 +6,9 @@ function Navbar_Mobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-row items-center h-20 justify-between px-4 py-2 text-black border-b border-b-white text-xl bg-white">
+    <div className="flex flex-row items-center h-20 justify-between px-4 py-2 text-white border-b border-b-white text-xl bg-bg_gray2">
       <div className="">
-        <div>Gruppe Blau</div>
+        <Link href={"/"}>Gruppe Blau</Link>
       </div>
 
       <div className="flex h-8 w-8 cursor-pointer">
@@ -22,7 +22,7 @@ function Navbar_Mobile() {
         </svg>
       </div>
       {isMenuOpen && (
-        <div className="fixed top-20 left-0 bg-darkblue1 h-screen w-80  p-3 ">
+        <div className="fixed top-20 left-0 bg-bg_gray2 h-screen w-80  p-3 ">
           <div className="flex flex-col  justify-between  text-white  ">
             <Link href={"/Automat"}>
               <div className="px-2 p-1 my-4  mx-4">Automat</div>
@@ -34,9 +34,7 @@ function Navbar_Mobile() {
               <div className="px-2 p-1 my-4  ml-4">Blog</div>
             </Link>
             <Link href={"/contactus"}>
-              <div className="  ml-3 my-2  justify-center text-black flex h-full w-40 px-3 py-4 items-center border box-border border-black1 rounded-md bg-green1">
-                Contact Us
-              </div>
+              <div className="px-2 p-1 my-4  ml-4">Contac us</div>
             </Link>
           </div>
         </div>
