@@ -4,34 +4,75 @@ import Link from "next/link";
 import "../sass/main.scss";
 
 const Header = () => {
+  const buttonVariants = {
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+    tap: {
+      scale: 0.95,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: -180 }}
+      initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
         ease: "easeInOut",
         duration: 1,
-        delay: 0.6,
+        delay: 0.5,
       }}
       className="header"
     >
       <div className="header-inner text-white">
-        <div className="logo">
-          <Link href={""}>Gruppe Blau</Link>
-        </div>
+        <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
+          <Link href="/">Gruppe Blau</Link>
+        </motion.div>
         <nav className="nav">
           <li>
-            <Link href="/design">Automat</Link>
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <Link href="/Automat">Automat</Link>
+            </motion.div>
           </li>
           <li>
-            <Link href="/Teams">Teams</Link>
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <Link href="/Teams">Teams</Link>
+            </motion.div>
           </li>
           <li>
-            <Link href="/Blog">Blog</Link>
+            <motion.div
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <Link href="/Blog">Blog</Link>
+            </motion.div>
           </li>
         </nav>
         <div className="contact">
-          <Link href="/contactus">Let s work together</Link>
+          <motion.div
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="tap"
+          >
+            <Link href="/contactus">Let s work together</Link>
+          </motion.div>
         </div>
       </div>
     </motion.div>

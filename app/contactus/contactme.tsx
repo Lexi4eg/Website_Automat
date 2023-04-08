@@ -48,8 +48,30 @@ function Contactme() {
       <div className="flex text-white flex-col h-screen  bg-bg_gray2">
         <div>
           <div className="p-5 sm:p-20 py-10">
-            <div className="text-2xl">Contact</div>
-            <div className="pt-6 text-6xl p-6 px-0">Don’t be shy, say hi.</div>
+            <motion.div
+              className="text-2xl"
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+                delay: 0.4,
+              }}
+            >
+              Contact
+            </motion.div>
+            <motion.div
+              className="pt-6 text-6xl p-6 px-0"
+              initial={{ opacity: 0, y: 80 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                ease: "easeInOut",
+                duration: 1,
+                delay: 0.4,
+              }}
+            >
+              Don’t be shy, say hi.
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
@@ -66,7 +88,16 @@ function Contactme() {
               </span>
             </motion.div>
           </div>
-          <div className="p-5 sm:p-20 py-10 bg-bg_gray2">
+          <motion.div
+            className="p-5 sm:p-20 py-10 bg-bg_gray2"
+            initial={{ opacity: 0, y: 80 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 0.4,
+            }}
+          >
             <form onSubmit={handleSubmit} className="">
               <div className="flex sm:flex-row flex-col">
                 <div className="sm:w-1/2 w-full  p-5">
@@ -171,7 +202,7 @@ function Contactme() {
                 </div>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </>

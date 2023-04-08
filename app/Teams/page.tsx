@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
@@ -5,6 +6,7 @@ import Grid from "./Grid";
 
 import { Roboto } from "@next/font/google";
 import Introduction from "./Introduction";
+import { motion } from "framer-motion";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -15,7 +17,16 @@ function page() {
   return (
     <>
       <div className="flex flex-row bg-bg_gray">
-        <div className="hidden sm:flex">
+        <motion.div
+          className="hidden sm:flex"
+          initial={{ opacity: 0, x: -400 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 0.5,
+          }}
+        >
           <Image
             src={"/About-massive-agency-700x1049.jpg"}
             alt={""}
@@ -23,8 +34,17 @@ function page() {
             height={1000}
             objectFit="cover"
           ></Image>
-        </div>
-        <div className="w-full h-fit  bg-bg_gray2">
+        </motion.div>
+        <motion.div
+          className="w-full h-fit  bg-bg_gray2"
+          initial={{ opacity: 0, y: -40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 1,
+            delay: 0.5,
+          }}
+        >
           <Navbar></Navbar>
 
           <h1 className="text-white px-6 sm:px-20 p-10 mt-10 text-4xl lg:text-6xl sm:text-2xl md:text-5xl p-4 ">
@@ -41,7 +61,7 @@ function page() {
           <div className="text-white h-fit p-4 bg-bg_gray">
             <Introduction />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="w-full bg-bg_gray">

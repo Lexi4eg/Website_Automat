@@ -1,5 +1,41 @@
+"use client";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import "./styles/Grid.css";
+
+interface Props {
+  text: string;
+}
+
+const cardVariants: Variants = {
+  offscreen: {
+    y: 300,
+  },
+  onscreen: {
+    y: 50,
+
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+    },
+  },
+};
+
+function Text({ text }: Props) {
+  return (
+    <motion.div
+      className="card-container"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.8 }}
+    >
+      <motion.div className="card" variants={cardVariants}>
+        {text}
+      </motion.div>
+    </motion.div>
+  );
+}
 
 const Grid = () => {
   const items = [
@@ -55,7 +91,16 @@ const Grid = () => {
           key={item.id}
           className="group bg-bg_gray2 p-4 pb-10 shadow-lg p-2 rounded-md"
         >
-          <div className="flex justify-center  w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+          <motion.div
+            className="flex justify-center  w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8"
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 0.5,
+            }}
+          >
             <Image
               className="rounded-lg"
               src={item.imageUrl}
@@ -65,7 +110,7 @@ const Grid = () => {
               layout="responsive"
               objectFit="cover"
             />
-          </div>
+          </motion.div>
           <p className="pl-4 text-3xl mt-4 text-white">{item.name}</p>
           <p className="pl-4 text-2xl mt-4 text-white">{item.title}</p>
         </div>
