@@ -1,10 +1,26 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 //import { Head } from "next/document";
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import axios from "axios";
 import { motion } from "framer-motion";
+
+const NotificationComponent = () => {
+  useEffect(() => {
+    if (Notification.permission === "granted") {
+      new Notification("Hello, World!");
+    } else if (Notification.permission !== "denied") {
+      Notification.requestPermission().then((permission) => {
+        if (permission === "granted") {
+          new Notification("Hello, World!");
+        }
+      });
+    }
+  }, []);
+
+  return null;
+};
 
 function Contactme() {
   const [firstname, setfirstname] = useState("");
