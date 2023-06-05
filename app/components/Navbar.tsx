@@ -27,7 +27,7 @@ function Navbar() {
       }}
     >
       <Head />
-      {isMobileDevice ? <Navbar_Mobile /> : <Header />}
+      {isMobileDevice ? <Navbar_Mobile /> : <Navbar_Desktop />}
     </motion.div>
   );
 }

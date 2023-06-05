@@ -6,7 +6,7 @@ function Navbar_Mobile() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="flex flex-row items-center h-20 justify-between px-4 py-2 text-white border-b border-b-white text-xl bg-bg_gray2">
+    <div className="flex flex-row items-center h-20 justify-between px-4 py-2 z-50 text-white border-b border-b-white text-xl bg-bg_gray2">
       <div className="">
         <Link href={"/"}>Gruppe Blau</Link>
       </div>
