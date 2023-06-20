@@ -26,7 +26,7 @@ function Product({ props }: any) {
             className="text-2xl border px-4 py-2 rounded-lg bg-red-500 flex justify-center items-center hover:bg-red-700 "
             href={"/Automat/Thankorder"}
           >
-            <button onClick={props.sendrequest} className="text-white">
+            <button onClick={props.sendrequest} className="text-white text-3xl">
               Buy now
             </button>
           </Link>
