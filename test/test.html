@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTTP request example</title>
+  </head>
+  <body>
+    <h1>Send HTTP request</h1>
+
+    <button onclick="sendRequest('http://192.168.178.165:8080/off')">
+      Turn off Motors
+    </button>
+    <button onclick="sendRequest('http://192.168.178.165:8080/refill')">
+      Refill
+    </button>
+    <button onclick="sendRequest('http://192.168.178.165:8080/Kitkat')">
+      Kitkat
+    </button>
+    <button onclick="sendRequest('http://192.168.178.165:8080/MM')">M&M</button>
+    <button onclick="sendRequest('http://192.168.178.165:8080/Bueno')">
+      Bueno
+    </button>
+    <button onclick="sendRequest('http://192.168.178.165:8080/Haribo')">
+      Haribo
+    </button>
+
+    <script>
+      function sendRequest(url) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((text) => console.log(text))
+          .catch((error) => console.error(error));
+      }
+    </script>
+  </body>
+</html>

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
-import { sendrequest } from "./apires";
+import { orderBueno, orderHaribo, orderKitkat, orderMM } from "./apires";
 
 function Product({ props }: any) {
   return (
@@ -26,7 +26,7 @@ function Product({ props }: any) {
             className="text-2xl border px-4 py-2 rounded-lg bg-red-500 flex justify-center items-center hover:bg-red-700 "
             href={"/Automat/Thankorder"}
           >
-            <button onClick={sendrequest} className="text-white">
+            <button onClick={props.sendrequest} className="text-white">
               Buy now
             </button>
           </Link>
@@ -50,6 +50,7 @@ function page() {
               stock: 10,
               description: "Kitkats",
               allergens: "Nuts",
+              sendrequest: orderKitkat,
             }}
           />
         </div>
@@ -62,6 +63,7 @@ function page() {
               stock: 4,
               description: "Haribo",
               allergens: "Nuts",
+              sendrequest: orderHaribo,
             }}
           />
         </div>
@@ -74,6 +76,7 @@ function page() {
               stock: 2,
               description: "M&M",
               allergens: "Nuts",
+              sendrequest: orderMM,
             }}
           />
         </div>
@@ -86,6 +89,7 @@ function page() {
               stock: 5,
               description: "Bueno ",
               allergens: "Nuts",
+              sendrequest: orderBueno,
             }}
           />
         </div>

@@ -13,6 +13,30 @@ export async function orderKitkat() {
   }
 }
 
+export async function refill() {
+  try {
+    const res = await fetch("http://192.168.178.165:8080/refill");
+
+    if (!res.ok) {
+      console.log("Error");
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+export async function turnoffmotors() {
+  try {
+    const res = await fetch("http://192.168.178.165:8080/off");
+
+    if (!res.ok) {
+      console.log("Error");
+    }
+  } catch (e) {
+    console.log(e);
+  }
+}
+
 export async function orderBueno() {
   try {
     const res = await fetch("http://192.168.178.165:8080/Bueno");
